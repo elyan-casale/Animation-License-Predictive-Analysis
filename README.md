@@ -21,4 +21,5 @@ Développement d'un système complet d'aide à la décision ("Shinpan") visant �
 * Projet salué par le jury de l'EPHEC pour sa cohérence technique et la maturité de l'approche métier (sécurisation des investissements).
 
 ## 📸 Aperçu du Dashboard
-*(Remplacez ce texte par : ![Aperçu Dashboard](nom_de_ton_image.png))*
+*(Remplacez ce texte par : ![Aperçu Dashboard](<img width="1327" height="743" alt="Shinpan_Power_BI_P1" src="https://github.com/user-attachments/assets/097beb50-dca6-4033-8db3-59791589e496" />
+))*
