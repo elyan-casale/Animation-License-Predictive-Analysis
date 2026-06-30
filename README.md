@@ -13,6 +13,7 @@ Développement d'un système complet d'aide à la décision ("Shinpan") visant �
 1. **Extraction & Nettoyage :** Mise en place de flux SSIS et de requêtes SQL Server pour structurer les données brutes.
 2. **Machine Learning :** Entraînement d'un modèle XGBoost pour anticiper les performances et la viabilité des licences.
 3. **Restitution Décisionnelle :** Création de tableaux de bord Power BI permettant d'analyser les indicateurs financiers croisés avec la robustesse des prédictions de l'IA.
+4. **Source des données :** https://docs.api.jikan.moe/
 
 ## 💡 Résultats & Retours
 * Solution technique complète, du nettoyage de la donnée jusqu'à la visualisation finale.
