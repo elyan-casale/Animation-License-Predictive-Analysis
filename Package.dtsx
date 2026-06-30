@@ -1,0 +1,1879 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/28/2026 12:14:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\Elyan"
+  DTS:DTSID="{2EA78632-6EBE-473F-951A-8EE59CB578B7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="2060"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{79917B3C-5CC4-414D-B405-807CBD1CB0E9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[.\SQLEXPRESS.Shinpan]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D89E474D-2260-4D85-93E3-169A2CA7F047}"
+      DTS:ObjectName=".\SQLEXPRESS.Shinpan">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Shinpan;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[JIKAN csv brut]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{337096E6-45F4-4CCC-8E62-2C80DABA510C}"
+      DTS:ObjectName="JIKAN csv brut">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2060"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\elyan\Videos\EPHEC\TFE\Travail\Shinpan_v2\jikan_donnees_brutes_franchises.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Anime_ID"
+              DTS:DTSID="{ADC7F964-C990-474C-A8BB-76BF3E39E2C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="192"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Titre"
+              DTS:DTSID="{C3ECFF11-B596-433F-8DB5-B5AD42A688E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="96"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Score"
+              DTS:DTSID="{91EA3293-49EE-4DF0-9AD7-3B7BCEF7FFD7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="64"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombre_Votants"
+              DTS:DTSID="{18CCE10F-90EF-4472-B02E-6C425D7893B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="29"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombre_Membres"
+              DTS:DTSID="{8FF7305F-B129-4F98-BC46-CCD73DD4EE1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Favoris"
+              DTS:DTSID="{17006BAB-5BF8-46DD-BD9B-6F571AD53D30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombre_Episodes"
+              DTS:DTSID="{8F8086F2-C9F7-4557-A2CC-9216715AE475}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Duree_Brute"
+              DTS:DTSID="{962528B1-67F4-4B84-9533-DA9C99254D58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Source"
+              DTS:DTSID="{CB7D44E7-6F04-4A54-B094-0630FD8E1F40}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{36230F3D-01B8-4D12-8E08-F459648B9982}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rating"
+              DTS:DTSID="{A9D8E3C8-06A3-43F8-8E52-EE20E768F511}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date_Sortie"
+              DTS:DTSID="{F2FE7419-8E11-449F-B5C7-6C944379E11E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Saison"
+              DTS:DTSID="{3F8D3928-29F5-4C71-A035-4892A1B584E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Studio_Principal"
+              DTS:DTSID="{1F79C1C4-7244-4226-9353-A863CC0E4DDD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Genre_Principal"
+              DTS:DTSID="{499ADD4B-9A22-4C4E-A7DE-F3A06161946C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\EXTRACT"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Conteneur de séquences"
+      DTS:DTSID="{C6E4DA80-3FE7-4556-BD71-B87CD3232D10}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXTRACT">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\EXTRACT\RAW EXTRACT"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Tâche de flux de données"
+          DTS:DTSID="{8A6B6B2F-3319-4C5F-A4B4-4A689DDF06E3}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="RAW EXTRACT"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\EXTRACT\RAW EXTRACT\Conversion de données"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+                  description="Conversion de données"
+                  name="Conversion de données"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données]"
+                      name="Entrée de conversion de données">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Anime_ID]"
+                          cachedDataType="i4"
+                          cachedName="Anime_ID"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Anime_ID]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Titre]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="192"
+                          cachedName="Titre"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Titre]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Score]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="96"
+                          cachedName="Score"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Score]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Nombre_Votants]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="64"
+                          cachedName="Nombre_Votants"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Votants]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Nombre_Membres]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="29"
+                          cachedName="Nombre_Membres"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Membres]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Favoris]"
+                          cachedDataType="r4"
+                          cachedName="Favoris"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Favoris]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Nombre_Episodes]"
+                          cachedDataType="r4"
+                          cachedName="Nombre_Episodes"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Episodes]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Duree_Brute]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="13"
+                          cachedName="Duree_Brute"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Duree_Brute]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Source]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="13"
+                          cachedName="Source"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Source]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Status]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="16"
+                          cachedName="Status"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Status]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Rating]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Rating"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Rating]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Date_Sortie]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Date_Sortie"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Date_Sortie]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Saison]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="25"
+                          cachedName="Saison"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Saison]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Studio_Principal]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="40"
+                          cachedName="Studio_Principal"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Studio_Principal]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données].Columns[Genre_Principal]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Genre_Principal"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Genre_Principal]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données]"
+                      exclusionGroup="1"
+                      name="Sortie de conversion de données"
+                      synchronousInputId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Anime_ID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Anime_ID]"
+                          name="Copy of Anime_ID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Anime_ID]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Titre]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="192"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Titre]"
+                          name="Copy of Titre"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Titre]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Score]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="96"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Score]"
+                          name="Copy of Score"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Score]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Votants]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="64"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Votants]"
+                          name="Copy of Nombre_Votants"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Votants]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Membres]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="29"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Membres]"
+                          name="Copy of Nombre_Membres"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Membres]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Favoris]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Favoris]"
+                          name="Copy of Favoris"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Favoris]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Episodes]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Episodes]"
+                          name="Copy of Nombre_Episodes"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Episodes]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Duree_Brute]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="13"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Duree_Brute]"
+                          name="Copy of Duree_Brute"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Duree_Brute]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Source]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="13"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Source]"
+                          name="Copy of Source"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Source]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Status]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="16"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Status]"
+                          name="Copy of Status"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Status]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Rating]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="30"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Rating]"
+                          name="Copy of Rating"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Rating]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Date_Sortie]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="30"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Date_Sortie]"
+                          name="Copy of Date_Sortie"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Date_Sortie]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Saison]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="25"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Saison]"
+                          name="Copy of Saison"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Saison]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Studio_Principal]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="40"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Studio_Principal]"
+                          name="Copy of Studio_Principal"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Studio_Principal]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Genre_Principal]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="30"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Genre_Principal]"
+                          name="Copy of Genre_Principal"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                              name="SourceInputColumnLineageID">#{Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Genre_Principal]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Sortie d'erreur de conversion de données"
+                      synchronousInputId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+                  description="Source du fichier plat"
+                  localeId="2060"
+                  name="jikan brut csv"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[JIKAN csv brut]"
+                      connectionManagerRefId="Package.ConnectionManagers[JIKAN csv brut]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat]"
+                      name="Sortie de source de fichier plat">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Anime_ID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Anime_ID]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Anime_ID]"
+                          name="Anime_ID"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Titre]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Titre]"
+                          length="192"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Titre]"
+                          name="Titre"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Score]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Score]"
+                          length="96"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Score]"
+                          name="Score"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Votants]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Nombre_Votants]"
+                          length="64"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Votants]"
+                          name="Nombre_Votants"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Membres]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Nombre_Membres]"
+                          length="29"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Membres]"
+                          name="Nombre_Membres"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Favoris]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Favoris]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Favoris]"
+                          name="Favoris"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Episodes]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Nombre_Episodes]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Nombre_Episodes]"
+                          name="Nombre_Episodes"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Duree_Brute]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Duree_Brute]"
+                          length="13"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Duree_Brute]"
+                          name="Duree_Brute"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Source]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Source]"
+                          length="13"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Source]"
+                          name="Source"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Status]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Status]"
+                          length="16"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Status]"
+                          name="Status"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Rating]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Rating]"
+                          length="30"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Rating]"
+                          name="Rating"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Date_Sortie]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Date_Sortie]"
+                          length="30"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Date_Sortie]"
+                          name="Date_Sortie"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Saison]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Saison]"
+                          length="25"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Saison]"
+                          name="Saison"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Studio_Principal]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Studio_Principal]"
+                          length="40"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Studio_Principal]"
+                          name="Studio_Principal"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Genre_Principal]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Genre_Principal]"
+                          length="30"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].Columns[Genre_Principal]"
+                          name="Genre_Principal"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Anime_ID]"
+                          dataType="i4"
+                          name="Anime_ID" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Titre]"
+                          codePage="65001"
+                          dataType="str"
+                          length="192"
+                          name="Titre" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Score]"
+                          codePage="65001"
+                          dataType="str"
+                          length="96"
+                          name="Score" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Nombre_Votants]"
+                          codePage="65001"
+                          dataType="str"
+                          length="64"
+                          name="Nombre_Votants" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Nombre_Membres]"
+                          codePage="65001"
+                          dataType="str"
+                          length="29"
+                          name="Nombre_Membres" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Favoris]"
+                          dataType="r4"
+                          name="Favoris" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Nombre_Episodes]"
+                          dataType="r4"
+                          name="Nombre_Episodes" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Duree_Brute]"
+                          codePage="65001"
+                          dataType="str"
+                          length="13"
+                          name="Duree_Brute" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Source]"
+                          codePage="65001"
+                          dataType="str"
+                          length="13"
+                          name="Source" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Status]"
+                          codePage="65001"
+                          dataType="str"
+                          length="16"
+                          name="Status" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Rating]"
+                          codePage="65001"
+                          dataType="str"
+                          length="30"
+                          name="Rating" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Date_Sortie]"
+                          codePage="65001"
+                          dataType="str"
+                          length="30"
+                          name="Date_Sortie" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Saison]"
+                          codePage="65001"
+                          dataType="str"
+                          length="25"
+                          name="Saison" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Studio_Principal]"
+                          codePage="65001"
+                          dataType="str"
+                          length="40"
+                          name="Studio_Principal" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat].ExternalColumns[Genre_Principal]"
+                          codePage="65001"
+                          dataType="str"
+                          length="30"
+                          name="Genre_Principal" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie d'erreur de source de fichier plat]"
+                      isErrorOut="true"
+                      name="Sortie d'erreur de source de fichier plat">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Colonne de sortie d'erreur de source de fichier plat"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                          name="Colonne de sortie d'erreur de source de fichier plat" />
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\EXTRACT\RAW EXTRACT\Multidiffusion"
+                  componentClassID="Microsoft.Multicast"
+                  contactInfo="Multidiffusion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+                  description="Distribue chaque ligne d'entrée à chaque ligne dans au moins une sortie. Par exemple, connectez votre flux de données pour effectuer une copie des données afin que certaines valeurs puissent être masquées avant de les partager avec des partenaires externes."
+                  name="Multidiffusion">
+                  <inputs>
+                    <input
+                      refId="Package\EXTRACT\RAW EXTRACT\Multidiffusion.Inputs[Multidiffusion entrée 1]"
+                      name="Multidiffusion entrée 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\EXTRACT\RAW EXTRACT\Multidiffusion.Outputs[Multidiffusion sortie 1]"
+                      dangling="true"
+                      deleteOutputOnPathDetached="true"
+                      name="Multidiffusion sortie 1"
+                      synchronousInputId="Package\EXTRACT\RAW EXTRACT\Multidiffusion.Inputs[Multidiffusion entrée 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+                  description="Destination OLE DB"
+                  name="Stagin JIKAN"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                      name="OpenRowset">[Staging].[JIKAN]</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Commande SQL à exécuter."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie le mode utilisé pour accéder à la base de données."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                      name="FastLoadKeepIdentity">true</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[.\SQLEXPRESS.Shinpan]"
+                      connectionManagerRefId="Package.ConnectionManagers[.\SQLEXPRESS.Shinpan]"
+                      description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB]"
+                      errorOrTruncationOperation="Insérer"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Entrée de destination OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Anime_ID]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of Anime_ID"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Anime_ID]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Anime_ID]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Titre]"
+                          cachedDataType="wstr"
+                          cachedLength="192"
+                          cachedName="Copy of Titre"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Titre]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Titre]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Score]"
+                          cachedDataType="wstr"
+                          cachedLength="96"
+                          cachedName="Copy of Score"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Score]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Score]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Nombre_Votants]"
+                          cachedDataType="wstr"
+                          cachedLength="64"
+                          cachedName="Copy of Nombre_Votants"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Nombre_Votants]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Votants]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Nombre_Membres]"
+                          cachedDataType="wstr"
+                          cachedLength="29"
+                          cachedName="Copy of Nombre_Membres"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Nombre_Membres]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Membres]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Favoris]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of Favoris"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Favoris]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Favoris]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Nombre_Episodes]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of Nombre_Episodes"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Nombre_Episodes]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nombre_Episodes]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Duree_Brute]"
+                          cachedDataType="wstr"
+                          cachedLength="13"
+                          cachedName="Copy of Duree_Brute"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Duree_Brute]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Duree_Brute]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Source]"
+                          cachedDataType="wstr"
+                          cachedLength="13"
+                          cachedName="Copy of Source"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Source]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Source]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Status]"
+                          cachedDataType="wstr"
+                          cachedLength="16"
+                          cachedName="Copy of Status"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Status]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Status]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Rating]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Copy of Rating"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Rating]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Rating]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Date_Sortie]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Copy of Date_Sortie"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Date_Sortie]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Date_Sortie]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Saison]"
+                          cachedDataType="wstr"
+                          cachedLength="25"
+                          cachedName="Copy of Saison"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Saison]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Saison]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Studio_Principal]"
+                          cachedDataType="wstr"
+                          cachedLength="40"
+                          cachedName="Copy of Studio_Principal"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Studio_Principal]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Studio_Principal]" />
+                        <inputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].Columns[Copy of Genre_Principal]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Copy of Genre_Principal"
+                          externalMetadataColumnId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Genre_Principal]"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Genre_Principal]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Anime_ID]"
+                          dataType="wstr"
+                          length="4000"
+                          name="Anime_ID" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Titre]"
+                          dataType="wstr"
+                          length="200"
+                          name="Titre" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Score]"
+                          dataType="wstr"
+                          length="100"
+                          name="Score" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Nombre_Votants]"
+                          dataType="wstr"
+                          length="100"
+                          name="Nombre_Votants" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Nombre_Membres]"
+                          dataType="wstr"
+                          length="100"
+                          name="Nombre_Membres" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Favoris]"
+                          dataType="wstr"
+                          length="4000"
+                          name="Favoris" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Nombre_Episodes]"
+                          dataType="wstr"
+                          length="4000"
+                          name="Nombre_Episodes" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Duree_Brute]"
+                          dataType="wstr"
+                          length="50"
+                          name="Duree_Brute" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Source]"
+                          dataType="wstr"
+                          length="50"
+                          name="Source" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Status]"
+                          dataType="wstr"
+                          length="50"
+                          name="Status" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Rating]"
+                          dataType="wstr"
+                          length="100"
+                          name="Rating" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Date_Sortie]"
+                          dataType="wstr"
+                          length="100"
+                          name="Date_Sortie" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Saison]"
+                          dataType="wstr"
+                          length="50"
+                          name="Saison" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Studio_Principal]"
+                          dataType="wstr"
+                          length="50"
+                          name="Studio_Principal" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Genre_Principal]"
+                          dataType="wstr"
+                          length="50"
+                          name="Genre_Principal" />
+                        <externalMetadataColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB].ExternalColumns[Score_Predit]"
+                          dataType="wstr"
+                          length="4000"
+                          name="Score_Predit" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Outputs[Sortie d'erreur de destination OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Sortie d'erreur de destination OLE DB"
+                      synchronousInputId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\EXTRACT\RAW EXTRACT.Paths[Sortie d'erreur de source de fichier plat]"
+                  endId="Package\EXTRACT\RAW EXTRACT\Multidiffusion.Inputs[Multidiffusion entrée 1]"
+                  name="Sortie d'erreur de source de fichier plat"
+                  startId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie d'erreur de source de fichier plat]" />
+                <path
+                  refId="Package\EXTRACT\RAW EXTRACT.Paths[Sortie de conversion de données]"
+                  endId="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN.Inputs[Entrée de destination OLE DB]"
+                  name="Sortie de conversion de données"
+                  startId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Outputs[Sortie de conversion de données]" />
+                <path
+                  refId="Package\EXTRACT\RAW EXTRACT.Paths[Sortie de source de fichier plat]"
+                  endId="Package\EXTRACT\RAW EXTRACT\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Sortie de source de fichier plat"
+                  startId="Package\EXTRACT\RAW EXTRACT\jikan brut csv.Outputs[Sortie de source de fichier plat]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\EXTRACT\TRUNCATE"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{CEC90C32-678A-4A83-AFBF-1E5652E8191F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="TRUNCATE"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{D89E474D-2260-4D85-93E3-169A2CA7F047}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE [Staging].[JIKAN]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\EXTRACT.PrecedenceConstraints[Contrainte]"
+          DTS:CreationName=""
+          DTS:DTSID="{0E4029CE-298F-427A-872B-33375A01324A}"
+          DTS:From="Package\EXTRACT\TRUNCATE"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Contrainte"
+          DTS:To="Package\EXTRACT\RAW EXTRACT" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LOAD"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Conteneur de séquences"
+      DTS:DTSID="{CD6DD62C-D85C-4AFC-B2E6-54B6F8621DF5}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LOAD">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\LOAD\LOAD TO CLEAN"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{EF60A3A3-B9EA-4932-88D3-4412CED1089B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LOAD TO CLEAN"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{D89E474D-2260-4D85-93E3-169A2CA7F047}"
+              SQLTask:SqlStatementSource="&#xA;DELETE FROM [Clean].[Fact_Franchise];&#xA;DELETE FROM [Clean].[Dim_Studio];&#xA;DELETE FROM [Clean].[Dim_Genre];&#xA;DELETE FROM [Clean].[Dim_Classification];&#xA;DELETE FROM [Clean].[Dim_Source];&#xA;DELETE FROM [Clean].[Dim_Date];&#xA;&#xA;&#xA;INSERT INTO [Clean].[Dim_Studio] (Studio_id, Studio_Nom)&#xA;SELECT Studio_id, Studio_Nom FROM [Staging].[Dim_Studio];&#xA;&#xA;INSERT INTO [Clean].[Dim_Genre] (Genre_id, Genre_Nom)&#xA;SELECT Genre_id, Genre_Nom FROM [Staging].[Dim_Genre];&#xA;&#xA;INSERT INTO [Clean].[Dim_Classification] (Classification_id, Rating_Code, Status_Nom)&#xA;SELECT Classification_id, Rating_Code, Status_Nom FROM [Staging].[Dim_Classification];&#xA;&#xA;INSERT INTO [Clean].[Dim_Source] (Source_id, Source_Nom)&#xA;SELECT Source_id, Source_Nom FROM [Staging].[Dim_Source];&#xA;&#xA;INSERT INTO [Clean].[Dim_Date] (Date_id, Sortie_Date, Annee, Mois, Saison_Nom)&#xA;SELECT Date_id, Sortie_Date, Annee, Mois, Saison_Nom FROM [Staging].[Dim_Date];&#xA;&#xA;&#xA;INSERT INTO [Clean].[Fact_Franchise]&#xA;SELECT * FROM [Staging].[Fact_Franchise];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRANSFORM"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Conteneur de séquences"
+      DTS:DTSID="{B31E85B9-E396-4077-BE81-F8BBB72C903D}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRANSFORM">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\TRANSFORM\Dim Filter"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{C8AC3791-482E-4585-ACB5-2D2419EC363B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Dim Filter"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{D89E474D-2260-4D85-93E3-169A2CA7F047}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE [Staging].[Dim_Source];&#xA;INSERT INTO [Staging].[Dim_Source] (Source_Nom)&#xA;SELECT DISTINCT [Source] FROM [Staging].[JIKAN] WHERE [Source] IS NOT NULL;&#xA;&#xA;TRUNCATE TABLE [Staging].[Dim_Studio];&#xA;INSERT INTO [Staging].[Dim_Studio] (Studio_Nom)&#xA;SELECT DISTINCT [Studio_Principal] FROM [Staging].[JIKAN] WHERE [Studio_Principal] IS NOT NULL;&#xA;&#xA;TRUNCATE TABLE [Staging].[Dim_Genre];&#xA;INSERT INTO [Staging].[Dim_Genre] (Genre_Nom)&#xA;SELECT DISTINCT [Genre_Principal] FROM [Staging].[JIKAN] WHERE [Genre_Principal] IS NOT NULL;&#xA;&#xA;TRUNCATE TABLE [Staging].[Dim_Classification];&#xA;INSERT INTO [Staging].[Dim_Classification] (Rating_Code, Status_Nom)&#xA;SELECT DISTINCT [Rating], [Status] FROM [Staging].[JIKAN] WHERE [Rating] IS NOT NULL OR [Status] IS NOT NULL;&#xA;&#xA;TRUNCATE TABLE [Staging].[Dim_Date];&#xA;INSERT INTO [Staging].[Dim_Date] (Sortie_Date, Annee, Mois, Saison_Nom)&#xA;SELECT DISTINCT &#xA;    TRY_CAST(LEFT([Date_Sortie], 10) AS DATE),&#xA;    YEAR(TRY_CAST(LEFT([Date_Sortie], 10) AS DATE)),&#xA;    MONTH(TRY_CAST(LEFT([Date_Sortie], 10) AS DATE)),&#xA;    [Saison]&#xA;FROM [Staging].[JIKAN]&#xA;WHERE [Date_Sortie] IS NOT NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\TRANSFORM\Fact Filter"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{7D021CE9-3A38-43A5-B796-B0DCD30A467A}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Fact Filter"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{D89E474D-2260-4D85-93E3-169A2CA7F047}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE [Staging].[Fact_Franchise];&#xA;&#xA;WITH CTE_Animes_Uniques AS (&#xA;    SELECT &#xA;        *,&#xA;        ROW_NUMBER() OVER(PARTITION BY [Anime_ID] ORDER BY [Anime_ID]) as rn&#xA;    FROM [Staging].[JIKAN]&#xA;)&#xA;INSERT INTO [Staging].[Fact_Franchise] (&#xA;    [anime_id],&#xA;    [date_id],&#xA;    [studio_id],&#xA;    [genre_id],&#xA;    [classification_id],&#xA;    [source_id],&#xA;    [titre],&#xA;    [score],&#xA;    [votants_nombre],&#xA;    [membres_nombre],&#xA;    [favoris],&#xA;    [episodes_nombre],&#xA;    [episodes_minute_duree],&#xA;    [predit_score]&#xA;)&#xA;SELECT &#xA;    j.[Anime_ID],&#xA;    &#xA;    dd.[Date_id],&#xA;    ds.[Studio_id],&#xA;    dg.[Genre_id],&#xA;    dc.[Classification_id],&#xA;    dso.[Source_id],&#xA;    &#xA;    j.[Titre],&#xA;    &#xA;    TRY_CAST(j.[Score] AS DECIMAL(4,2)) AS score,&#xA;    &#xA;    TRY_CAST(TRY_CAST(j.[Nombre_Votants] AS FLOAT) AS INT) AS votants_nombre,&#xA;    TRY_CAST(TRY_CAST(j.[Nombre_Membres] AS FLOAT) AS INT) AS membres_nombre,&#xA;    TRY_CAST(TRY_CAST(j.[Favoris] AS FLOAT) AS INT) AS favoris,&#xA;    &#xA;    (TRY_CAST(TRY_CAST(j.[Nombre_Episodes] AS FLOAT) AS INT) / 10) AS episodes_nombre,&#xA;    &#xA;    TRY_CAST(SUBSTRING(j.[Duree_Brute], 1, CHARINDEX(' ', j.[Duree_Brute] + ' ') - 1) AS INT) AS episodes_minute_duree,&#xA;    &#xA;    NULL AS predit_score&#xA;&#xA;FROM CTE_Animes_Uniques j&#xA;&#xA;LEFT JOIN [Staging].[Dim_Date] dd &#xA;    ON TRY_CAST(LEFT(j.[Date_Sortie], 10) AS DATE) = dd.[Sortie_Date]&#xA;   AND ISNULL(j.[Saison], 'N/A') = ISNULL(dd.[Saison_Nom], 'N/A')&#xA;   &#xA;LEFT JOIN [Staging].[Dim_Studio] ds &#xA;    ON j.[Studio_Principal] = ds.[Studio_Nom]&#xA;LEFT JOIN [Staging].[Dim_Genre] dg &#xA;    ON j.[Genre_Principal] = dg.[Genre_Nom]&#xA;LEFT JOIN [Staging].[Dim_Classification] dc &#xA;    ON ISNULL(j.[Rating], 'N/A') = ISNULL(dc.[Rating_Code], 'N/A') &#xA;   AND ISNULL(j.[Status], 'N/A') = ISNULL(dc.[Status_Nom], 'N/A')&#xA;LEFT JOIN [Staging].[Dim_Source] dso &#xA;    ON j.[Source] = dso.[Source_Nom]&#xA;&#xA;WHERE j.rn = 1;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\TRANSFORM.PrecedenceConstraints[Contrainte]"
+          DTS:CreationName=""
+          DTS:DTSID="{CF1B08EB-454F-4BE0-9FA8-5F387A4C4848}"
+          DTS:From="Package\TRANSFORM\Dim Filter"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Contrainte"
+          DTS:To="Package\TRANSFORM\Fact Filter" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{8EE95DBF-EDA4-4C89-B631-C4B079F0F564}"
+      DTS:From="Package\EXTRACT"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\TRANSFORM" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{7F3F4607-A6EB-4238-9593-29B1F8D7CC98}"
+      DTS:From="Package\TRANSFORM"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 1"
+      DTS:To="Package\LOAD" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\EXTRACT\RAW EXTRACT"
+          TopLeft="42.9999979510907,94.7666660459172" />
+        <NodeLayout
+          Size="243.2,41.6"
+          Id="Package\EXTRACT\TRUNCATE"
+          TopLeft="3.83333342439602,5.5" />
+        <EdgeLayout
+          Id="Package\EXTRACT.PrecedenceConstraints[Contrainte]"
+          TopLeft="122.616665687743,47.0999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.6666660459174"
+              Start="0,0"
+              End="0,40.1666660459174">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.1666660459174" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="253.6,191.2"
+          Size="253.6,234.4"
+          Id="Package\EXTRACT"
+          TopLeft="270.833318535653,35.5333330862389" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\LOAD\LOAD TO CLEAN"
+          TopLeft="59.580933127707,37.0370327303443" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="287.2,133.6"
+          Size="287.2,176.8"
+          Id="Package\LOAD"
+          TopLeft="871.190428590729,51.5195763692635" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\TRANSFORM\Dim Filter"
+          TopLeft="69.4666537357706,22.8333332127996" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\TRANSFORM\Fact Filter"
+          TopLeft="70.3333148476157,94.9999967636666" />
+        <EdgeLayout
+          Id="Package\TRANSFORM.PrecedenceConstraints[Contrainte]"
+          TopLeft="131.899984291693,64.4333332127996">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.566663550867"
+              Start="0,0"
+              End="0,23.066663550867">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.066663550867" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="252.8,191.2"
+          Size="252.8,234.4"
+          Id="Package\TRANSFORM"
+          TopLeft="576.66663515899,30.3333331223996" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="524.433318535653,150.133333104319">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.2333166233374,0"
+              Start="0,0"
+              End="44.7333166233374,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="44.7333166233374,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 1]"
+          TopLeft="829.46663515899,143.726454745832">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41.7237934317387,0"
+              Start="0,0"
+              End="34.2237934317387,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="34.2237934317387,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\EXTRACT\RAW EXTRACT">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\EXTRACT\RAW EXTRACT\jikan brut csv"
+          TopLeft="333.333315120804,80.5999994395176" />
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\EXTRACT\RAW EXTRACT\Multidiffusion"
+          TopLeft="560.833302690752,136.933332381116" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\EXTRACT\RAW EXTRACT\Conversion de données"
+          TopLeft="303.333316759931,187.199998698235" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN"
+          TopLeft="334.999981696408,295.533331278231" />
+        <EdgeLayout
+          Id="Package\EXTRACT\RAW EXTRACT.Paths[Sortie d'erreur de source de fichier plat]"
+          TopLeft="472.533315120804,101.399999439518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88.2999875699488,56.3333329415984"
+              Start="0,0"
+              End="80.7999875699488,56.3333329415984">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.1499937849744,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.1499937849744,0"
+                    Point2="44.1499937849744,0"
+                    Point3="44.1499937849744,4" />
+                  <mssgle:LineSegment
+                    End="44.1499937849744,52.3333329415984" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.1499937849744,52.3333329415984"
+                    Point2="44.1499937849744,56.3333329415984"
+                    Point3="48.1499937849744,56.3333329415984" />
+                  <mssgle:LineSegment
+                    End="80.7999875699488,56.3333329415984" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-51.6200452775256,-22,191.540078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\EXTRACT\RAW EXTRACT.Paths[Sortie de source de fichier plat]"
+          TopLeft="400.133315940367,122.199999439518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.9999992587169"
+              Start="0,0"
+              End="0,57.4999992587169">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.4999992587169" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,20.7499996293584,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\EXTRACT\RAW EXTRACT.Paths[Sortie de conversion de données]"
+          TopLeft="401.16664922817,228.799998698235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.7333325799969"
+              Start="0,0"
+              End="0,59.2333325799969">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.2333325799969" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\EXTRACT\RAW EXTRACT\Stagin JIKAN">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
